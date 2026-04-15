@@ -45,7 +45,7 @@ services:
     depends_on:
       - config-db
     ports:
-      - "5020:80" 
+      - "5010:80" 
     command: >
       sh -c "
         echo 'SERVER_MODE = False' > /pgadmin4/config_local.py &&
