@@ -17,17 +17,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
           <div class="hero-text">
-            <h1>{% trans "MohaMed NabiL" %}</h1>
-            <p class="lead">
-              {% trans "I'm a" %} 
-              <span class="typed" data-typed-items="
-                {% if personal_info.title %}{{ personal_info.title }},{% endif %}
-                {% trans "Web Designer" %},
-                {% trans "UI/UX Designer" %},
-                {% trans "Web Developer" %},
-                {% trans "Creative Director" %}
-              "></span>
-            </p>
+            <h1>{{ personal_info.name|default:"SnapFolio" }}</h1>
+
             <p class="description">{{ personal_info.bio|default:''|truncatechars:200 }}</p>
 
             <div class="hero-actions">
@@ -37,9 +28,9 @@
 
             <div class="social-links">
               {% if site_settings.facebook_url %}<a href="{{ site_settings.facebook_url }}"><i class="bi bi-facebook"></i></a>{% endif %}
-              {% if site_settings.twitter_url %}<a href="{{ site_settings.twitter_url }}"><i class="bi bi-twitter-x"></i></a>{% endif %}
-              {% if site_settings.github_url %}<a href="{{ site_settings.github_url }}"><i class="bi bi-github"></i></a>{% endif %}
-              {% if site_settings.linkedin_url %}<a href="{{ site_settings.linkedin_url }}"><i class="bi bi-linkedin"></i></a>{% endif %}
+              {% if site_settings.twitter_url %}<a href="{{ site_settings.twitter_url }}"><i class="bi bi-instagram"></i></a>{% endif %}
+              {% if site_settings.github_url %}<a href="{{ site_settings.github_url }}"><i class="bi bi-tiktok"></i></a>{% endif %}
+              {% if site_settings.linkedin_url %}<a href="{{ site_settings.linkedin_url }}"><i class="bi bi-tiktok"></i></a>{% endif %}
             </div>
           </div>
         </div>
