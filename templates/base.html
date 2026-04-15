@@ -1,0 +1,238 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ current_language.code|default:'en' }}" dir="{{ current_language.direction|default:'ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, shrink-to-fit=no" name="viewport">
+  <title>{% block title %}{{ site_settings.get_site_name|default:'SnapFolio' }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+  <meta name="keywords" content="{% block keywords %}{% endblock %}">
+
+
+  {% comment %} <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}"> {% endcomment %}
+
+  <!--Favicon from SiteSettings -->
+  {% if site_settings.favicon %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site_settings.favicon.url }}">
+  <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+  {% else %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}">
+  <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+  {% endif %}
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  {% block extra_css %}{% endblock %}
+
+<style>
+  /* RTL Support */
+  body[dir="rtl"] {
+    text-align: right;
+  }
+  
+  /* General margin for main content */
+  @media (min-width: 1200px) {
+    .header~main,
+    .header~#footer {
+      margin-left: 330px;
+    }
+    
+    /* RTL override for main margin */
+    body[dir="rtl"] .header~main,
+    body[dir="rtl"] .header~#footer {
+      margin-left: 0;
+      margin-right: 330px;
+    }
+    
+    /* RTL override for header position */
+    body[dir="rtl"] .header {
+      left: auto;
+      right: 30px;
+    }
+  }
+  
+  /* Mobile RTL adjustments */
+  @media (max-width: 1199px) {
+    body[dir="rtl"] .header {
+      left: auto !important;
+      right: -100% !important;
+    }
+    
+    body[dir="rtl"] .header.header-show {
+      left: auto !important;
+      right: 0 !important;
+    }
+    
+    body[dir="rtl"] .header-toggle-wrapper {
+      right: auto;
+      left: 20px;
+    }
+  }
+</style>
+
+</head>
+
+<body class="{% block body_class %}index-page{% endblock %}" dir="{{ current_language.direction|default:'ltr' }}">
+
+  {% include 'includes/header.html' %}
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'includes/footer.html' %}
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+  
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+    <i class="bi bi-moon-stars"></i>
+  </button>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  
+  <!-- CSRF Token for AJAX -->
+  <script>
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken');
+  </script>
+  
+  <!-- Theme Management Script -->
+  <script>
+    (function() {
+      const getPreferredTheme = () => {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || storedTheme === 'light') {
+          return storedTheme;
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+
+      const setTheme = (theme) => {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          const toggleIcon = document.querySelector('#theme-toggle i');
+          if (toggleIcon) {
+            toggleIcon.classList.remove('bi-moon-stars');
+            toggleIcon.classList.add('bi-sun');
+          }
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+          const toggleIcon = document.querySelector('#theme-toggle i');
+          if (toggleIcon) {
+            toggleIcon.classList.remove('bi-sun');
+            toggleIcon.classList.add('bi-moon-stars');
+          }
+        }
+      };
+
+      const initTheme = () => {
+        const preferredTheme = getPreferredTheme();
+        setTheme(preferredTheme);
+      };
+
+      const toggleTheme = () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          setTheme('light');
+        } else {
+          setTheme('dark');
+        }
+      };
+
+      initTheme();
+
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggleTheme);
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    })();
+  </script>
+  <script>
+    // Direct Preloader Fix - Force hide after page loads
+    (function() {
+        // Immediately hide preloader if it exists
+        function removePreloader() {
+            var preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                setTimeout(function() {
+                    if (preloader && preloader.parentNode) {
+                        preloader.parentNode.removeChild(preloader);
+                    }
+                }, 500);
+            }
+        }
+        
+        // Try to remove immediately
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', removePreloader);
+        } else {
+            removePreloader();
+        }
+        
+        // Also try on full load
+        window.addEventListener('load', removePreloader);
+        
+        // Force remove after 2 seconds max
+        setTimeout(removePreloader, 2000);
+    })();
+</script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

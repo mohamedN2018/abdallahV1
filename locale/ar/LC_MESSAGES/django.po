@@ -1,0 +1,216 @@
+# Arabic translations for SnapFolio
+msgid ""
+msgstr ""
+"Project-Id-Version: SnapFolio\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+# General
+msgid "Portfolio"
+msgstr "معرض الأعمال"
+
+msgid "SnapFolio"
+msgstr "سناب فوليو"
+
+msgid "I'm a"
+msgstr "أنا"
+
+msgid "Web Designer"
+msgstr "مصمم ويب"
+
+msgid "UI/UX Designer"
+msgid_plural "UI/UX Designer"
+msgstr[0] "مصمم واجهات"
+msgstr[1] "مصمم واجهات"
+
+msgid "Web Developer"
+msgstr "مطور ويب"
+
+msgid "Creative Director"
+msgstr "مدير إبداعي"
+
+msgid "View My Work"
+msgstr "تصفح أعمالي"
+
+msgid "Get In Touch"
+msgstr "تواصل معي"
+
+msgid "Get to Know Me"
+msgstr "تعرف علي"
+
+msgid "Passionate About Creating Digital Experiences"
+msgstr "شغوف بإنشاء تجارب رقمية"
+
+msgid "Projects Completed"
+msgstr "مشروع مكتمل"
+
+msgid "Years Experience"
+msgstr "سنوات خبرة"
+
+msgid "Client Satisfaction"
+msgstr "رضا العملاء"
+
+msgid "Download Resume"
+msgstr "تحميل السيرة الذاتية"
+
+msgid "Let's Talk"
+msgstr "لنتحدث"
+
+msgid "Happy Clients"
+msgstr "عملاء سعداء"
+
+msgid "Projects"
+msgstr "مشاريع"
+
+msgid "Hours Of Support"
+msgstr "ساعات دعم"
+
+msgid "Hard Workers"
+msgstr "عمال مجتهدون"
+
+msgid "Skills"
+msgstr "المهارات"
+
+msgid "My technical skills and expertise"
+msgstr "مهاراتي التقنية وخبراتي"
+
+msgid "Resume"
+msgstr "السيرة الذاتية"
+
+msgid "My professional journey and education"
+msgstr "مسيرتي المهنية والتعليمية"
+
+msgid "Professional Summary"
+msgstr "الملخص المهني"
+
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+msgid "Technical Skills"
+msgstr "المهارات التقنية"
+
+msgid "Professional Experience"
+msgstr "الخبرات المهنية"
+
+msgid "Present"
+msgstr "حالياً"
+
+msgid "Education"
+msgstr "التعليم"
+
+msgid "Creative Director & Developer"
+msgstr "مدير إبداعي ومطور"
+
+msgid "Services"
+msgstr "الخدمات"
+
+msgid "What I offer to help your business grow"
+msgstr "ما أقدمه لمساعدة عملك على النمو"
+
+msgid "Innovative Business"
+msgstr "حلول أعمال مبتكرة"
+
+msgid "Performance Solutions"
+msgstr "حلول عالية الأداء"
+
+msgid "I provide innovative solutions that help your business grow and succeed"
+msgstr "أقدم حلولاً مبتكرة تساعد عملك على النمو والنجاح"
+
+msgid "View All Services"
+msgstr "جميع الخدمات"
+
+msgid "Some of my recent work and projects"
+msgstr "بعض من أعمالي ومشاريعي الأخيرة"
+
+msgid "More Details"
+msgstr "تفاصيل أكثر"
+
+msgid "Testimonials"
+msgstr "آراء العملاء"
+
+msgid "What my clients say about working with me"
+msgstr "ماذا يقول عملائي عن العمل معي"
+
+msgid "Contact"
+msgstr "اتصل بي"
+
+msgid "Get in touch with me for inquiries or collaborations"
+msgstr "تواصل معي للاستفسارات أو التعاون"
+
+msgid "Contact Info"
+msgstr "معلومات الاتصال"
+
+msgid "Feel free to reach out to me through any of these channels"
+msgstr "لا تتردد في التواصل معي عبر أي من هذه القنوات"
+
+msgid "My Location"
+msgstr "موقعي"
+
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+msgid "Email Address"
+msgstr "البريد الإلكتروني"
+
+msgid "Send Me a Message"
+msgstr "أرسل لي رسالة"
+
+msgid "I'll get back to you as soon as possible"
+msgstr "سأرد عليك في أقرب وقت ممكن"
+
+msgid "Your Name"
+msgstr "الاسم"
+
+msgid "Your Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Loading"
+msgstr "جاري الإرسال"
+
+msgid "Your message has been sent. Thank you!"
+msgstr "تم إرسال رسالتك بنجاح! شكراً لك"
+
+msgid "Send Message"
+msgstr "إرسال الرسالة"
+
+msgid "Error sending message"
+msgstr "حدث خطأ في إرسال الرسالة"
+
+msgid "Network error. Please try again."
+msgstr "خطأ في الشبكة. الرجاء المحاولة مرة أخرى"
+
+# Header
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "About"
+msgstr "عني"
+
+msgid "Blog"
+msgstr "المدونة"
+
+msgid "Contact"
+msgstr "اتصل بي"
+
+# Footer
+msgid "Copyright"
+msgstr "جميع الحقوق محفوظة"
+
+msgid "All Rights Reserved"
+msgstr "جميع الحقوق محفوظة"
+
+msgid "Version 3.0.0"
+msgstr "الإصدار 3.0.0"
+
+msgid "Designed by"
+msgstr "تصميم وتطوير"
+
+# No data messages
+msgid "No skills data available"
+msgstr "لا توجد بيانات مهارات متاحة"
