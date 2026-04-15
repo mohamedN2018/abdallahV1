@@ -10,14 +10,14 @@ services:
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
-      DB_HOST: config-db
+      DB_HOST: configs-db
       DB_PORT: 5432
     command: gunicorn --chdir /usr/src/app --timeout 320 --workers 25 --access-logfile /dev/stdout --error-logfile /dev/stderr --bind :80 config.wsgi:application
     depends_on:
-      - config-db
+      - configs-db
 
 
-  config-db:
+  configsdb:
     image: postgres:17
     expose:
       - 5432
@@ -43,7 +43,7 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
-      - config-db
+      - configs-db
     ports:
       - "5010:80" 
     command: >
