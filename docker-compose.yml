@@ -17,7 +17,7 @@ services:
       - configs-db
 
 
-  configsdb:
+  configs-db:
     image: postgres:17
     expose:
       - 5432
@@ -43,7 +43,7 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
-      - configs-db
+      - config-db
     ports:
       - "5010:80" 
     command: >
