@@ -29,13 +29,13 @@ USE_X_FORWARDED_HOST = True
 SECURE_SSL_REDIRECT = not DEBUG
 
 
-MAIN_DOMAIN = config('MAIN_DOMAIN', default='mohamednabilpro.deplois.net').replace('https://', '').replace('http://', '')
+MAIN_DOMAIN = config('MAIN_DOMAIN', default='abdallh.deplois.net').replace('https://', '').replace('http://', '')
 
 
 ALLOWED_HOSTS = [MAIN_DOMAIN, f'www.{MAIN_DOMAIN}', '127.0.0.1', 'localhost']
 
 if DEBUG:
-    ALLOWED_HOSTS += ['127.0.0.1', 'localhost', 'https://mohamednabilpro.deplois.net/', 'http://mohamednabilpro.deplois.net/']
+    ALLOWED_HOSTS += ['127.0.0.1', 'localhost', 'https://abdallh.deplois.net/', 'http://abdallh.deplois.net/']
 
 
 # CSRF_TRUSTED_ORIGINS = [
