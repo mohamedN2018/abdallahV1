@@ -43,7 +43,7 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
-      - config-db
+      - configs-db
     ports:
       - "5010:80" 
     command: >
